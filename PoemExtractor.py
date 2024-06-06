@@ -21,6 +21,10 @@ class PoemExtractor:
         return self.poem_names
     
     def getPoem(self, file_name, poem_name):
+        self.poem.clear()
+        self.start_mark = False
+        self.end_mark = False
+        
         # Using readlines()
         file = open(file_name, 'r')
         Lines = file.readlines()
